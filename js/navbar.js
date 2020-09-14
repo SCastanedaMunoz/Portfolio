@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
     const navBarContents = {
         index : { 
             type:"page",
