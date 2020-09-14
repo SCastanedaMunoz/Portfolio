@@ -1,0 +1,29 @@
+.social-icon-nav {
+    width: 40px;
+    position: relative;
+    top: 10px;
+}
+
+.social-icon-side {
+    width: 40px;
+    position: relative;
+    top: 3.5px;
+}
+
+nav .brand-logo {
+    font-weight: bolder;
+    padding: 0px 15px;
+}
+
+nav ul a , .sidenav li>a 
+{
+    font-weight: bold;
+}
+
+nav {
+    background-color: #363F45;
+}
+
+body {
+    background-image: url("../assets/images/background.png");
+}
