@@ -1,0 +1,17 @@
+#web-project {
+    margin-top: 20px;
+    padding : 1.25em;
+    background-color: #455a64;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    margin: .2em;
+    text-shadow: 1.5px 1.5px #263238;
+}
+
+.see-more {
+    text-align: center;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+
+        <!-- Page Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+         <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <!-- Materialize Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="css/general.css">
+
+        <link rel="stylesheet" href="css/webdev.css">
+        
+        <script src="js/navbar.js"></script>
+        <script src="js/footer.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col offset-m3 m6" id="web-project">
+                    
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                const savedClicked = "clicked_dropdown";
+                var clicked = localStorage.getItem(savedClicked);
+
+                if(!clicked) {
+                    window.location.replace("index.html");
+                }
+
+                var webProject = JSON.parse(clicked);
+
+                $("#web-project").html(`
+                    <header><h2>${webProject.title}</h2></header>
+
+                    <div class="col s6 see-more">
+                        <a href="${webProject.link_deploy}" target="_blank">See the App!</a>
+                    </div>
+                    <div class="col s6 see-more">
+                        <a href="${webProject.link_github}" target="_blank">See the Code!</a>
+                    </div>
+                `);
+            });
+        </script>
+    </body>
+</html>
