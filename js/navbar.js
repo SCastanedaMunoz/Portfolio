@@ -1,27 +1,33 @@
 $(document).ready(function() {
+
     const navBarContents = {
-        index : { 
+        index: { 
             type:"page",
             link:"index.html",
             text:"About"
         },
-        webDevProjects : {
+        webDevProjects: {
             type:"page",
             link:"webProjects.html",
             text:"Web Dev"
         },
-        gameDevProjects : {
+        gameDevProjects: {
             type:"page",
             link:"gameDevProjects.html",
             text:"Game Dev"
         },
-        gitHub : {
+        resume: {
+            type:"page",
+            link:"gameDevProjects.html",
+            text:"Resume"
+        },
+        gitHub: {
             type:"icon",
             icon:"assets/icons/GitHub.png",
             link:"https://github.com/SCastanedaMunoz",
             text:"GitHub"
         },
-        linkedIn : {
+        linkedIn: {
             type:"icon",
             icon:"assets/icons/LinkedIn.png",
             link:"https://www.linkedin.com/in/santiagocastanedamunoz",
@@ -29,33 +35,20 @@ $(document).ready(function() {
         }
     }
 
+    const navBarTitle = "SCastanedaMunoz";
     var navHolder = $("<nav>");
     var navWrapper = $("<div>");
 
     $(navWrapper).addClass("nav-wrapper");
 
-    var brandLogo = $("<a>");
-    $(brandLogo).attr("href", "#!");
-    $(brandLogo).addClass("brand-logo");
-    $(brandLogo).text("Santiago Castaneda Munoz");
-    
-    var sideNavTarget = $("<a>");
-    $(sideNavTarget).attr("href", "#");
-    $(sideNavTarget).attr("data-target", "mobile-sidenav");
-    $(sideNavTarget).addClass("sidenav-trigger");
-
-    var hamburgerIcon = $("<i>");
-    $(hamburgerIcon).addClass("material-icons");
-    $(hamburgerIcon).text("menu");
+    var brandLogo = $(`<a href="#!" class="brand-logo">${navBarTitle}</a>`);
+    var sideNavTarget = $(`<a href="#" data-target="mobile-sidenav" class="sidenav-trigger" </a>`);
+    var hamburgerIcon = $(`<i class="material-icons">menu</i>`);
 
     $(sideNavTarget).append(hamburgerIcon);
 
-    var navBarContentsList = $("<ul>");
-    $(navBarContentsList).addClass("right hide-on-med-and-down");
-
-    var sideBarContentsList = $("<ul>");
-    $(sideBarContentsList).addClass("sidenav");
-    $(sideBarContentsList).attr("id", "mobile-sidenav");
+    var navBarContentsList = $(`<ul class="right hide-on-med-and-down"></ul>`);
+    var sideBarContentsList = $(`<ul class="sidenav" id="mobile-sidenav"></ul>`);
 
     fillNavElement(navBarContentsList, "nav");
     fillNavElement(sideBarContentsList, "side");
@@ -72,22 +65,13 @@ $(document).ready(function() {
             var contentItem = $("<li>");
             switch(value.type) {
                 case "page":
-                    var link = $("<a>");
-                    $(link).attr("href", value.link);
-                    $(link).text(value.text);
+                    var link = $(`<a href="${value.link}">${value.text}</a>`);
                     if(value.link == currentPage)
                         $(contentItem).addClass("active");
                     $(contentItem).append(link);
                     break;
                 case "icon":
-                    var link = $("<a>");
-                    $(link).attr("href", value.link);
-                    $(link).attr("target", "_blank");
-                    var icon = $("<img>");
-                    $(icon).attr("src", value.icon);
-                    $(icon).attr("alt", `${value.text} Social`);
-                    $(icon).addClass(`social-icon-${location}`);
-                    $(link).append(icon);
+                    var link = $(`<a href="${value.link}" target="_blank"><img src="${value.icon}" alt="${value.text} Social" class="social-icon-${location}"></a>`);
                     $(contentItem).append(link);
                     break;
             }

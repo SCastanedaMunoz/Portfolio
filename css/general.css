@@ -1,5 +1,6 @@
 * {
     font-family: 'Roboto Slab', serif;
+    text-shadow: 1px 1px #263238;
 }
 
 .social-icon-nav {
@@ -17,14 +18,29 @@
 nav .brand-logo {
     font-weight: bolder;
     padding: 0px 15px;
+    text-shadow: 1px 1px #90a4ae;
 }
 
 nav ul a , .sidenav li > a {
     font-weight: bold;
+    text-shadow: .75px .75px #607d8b;
 }
 
 nav {
     background-color: #263238;
+}
+
+.page-footer {
+    background-color: #263238;
+}
+
+.page-footer .footer-copyright {
+    background-color: #1f292e;
+}
+
+.footer-text {
+    color: white;
+    text-shadow: .75px .75px #607d8b;
 }
 
 body {
