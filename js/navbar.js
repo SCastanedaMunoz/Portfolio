@@ -4,12 +4,14 @@ $(document).ready(function() {
         { 
             type:"page",
             link:"index.html",
-            text:"About"
+            text:"About",
+            target:"",
         },
         {
             type:"page",
-            link:"gameDevProjects.html",
-            text:"Resume"
+            link:"https://drive.google.com/file/d/1DIu1QnKc5ktXcB2X-qkiC7vsH7hq-8le/view",
+            text:"Resume",
+            target:"_blank",
         },
         {
             type:"dropdown",
@@ -103,7 +105,7 @@ $(document).ready(function() {
             var contentItem = $("<li>");
             switch(value.type) {
                 case "page":
-                    var link = $(`<a href="${value.link}">${value.text}</a>`);
+                    var link = $(`<a href="${value.link}" target="${value.target}">${value.text}</a>`);
                     if(value.link == currentPage)
                         $(contentItem).addClass("active");
                     $(contentItem).append(link);

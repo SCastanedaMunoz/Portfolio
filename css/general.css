@@ -26,6 +26,12 @@ nav ul a , .sidenav li > a {
     text-shadow: .75px .75px #607d8b;
 }
 
+.dropdown-content li>a {
+    font-weight: bold;
+    color: rgba(0,0,0,0.87);
+    text-shadow: .75px .75px #607d8b;
+}
+
 nav {
     background-color: #263238;
 }
@@ -41,6 +47,16 @@ nav {
 .footer-text {
     color: white;
     text-shadow: .75px .75px #607d8b;
+}
+
+h6.footer-margin {
+    margin-bottom: .8em;
+}
+
+.footer-name {
+    color: white;
+    text-shadow: .75px .75px #607d8b;
+    margin: 0;
 }
 
 body {
