@@ -66,6 +66,10 @@ body {
     background-color: #cfd8dc;
 }
 
+.proj-btn:focus {
+    background-color: #90a4ae;
+}
+
 .button-row {
     margin-top: 10px;
     margin-bottom: 0px;
