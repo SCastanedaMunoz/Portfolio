@@ -46,3 +46,27 @@ nav {
 body {
     background-image: url("../assets/images/background.png");
 }
+
+.image-container {
+    text-align: center;
+}
+
+.screenshot {
+    border: 5px outset #cfd8dc;
+}
+
+.proj-btn {
+    background-color: #b0bec5;
+    color : black;
+    font-weight: bold;
+    text-shadow: .5px .5px #546e7a;
+}
+
+.proj-btn:hover {
+    background-color: #cfd8dc;
+}
+
+.button-row {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}

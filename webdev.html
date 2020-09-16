@@ -20,9 +20,6 @@
         <!-- Materialize Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <!-- Font Awesome CDN -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
         <link rel="stylesheet" href="css/general.css">
 
         <link rel="stylesheet" href="css/webdev.css">
@@ -35,7 +32,6 @@
         <div class="container">
             <div class="row">
                 <div class="col offset-m3 m6" id="web-project">
-                    
                 </div>
             </div>
         </div>
@@ -53,12 +49,19 @@
 
                 $("#web-project").html(`
                     <header><h2>${webProject.title}</h2></header>
-
-                    <div class="col s6 see-more">
-                        <a href="${webProject.link_deploy}" target="_blank">See the App!</a>
+                    <div class="image-container"> 
+                        <img src="${webProject.screenshot}" alt="${webProject.title} Screenshot" class="responsive-img screenshot">
                     </div>
-                    <div class="col s6 see-more">
-                        <a href="${webProject.link_github}" target="_blank">See the Code!</a>
+
+                    <p>${webProject.summary}</p>
+
+                    <div class="row button-row">
+                        <div class="col s6 see-more">
+                            <a href="${webProject.link_deploy}" target="_blank" class="proj-btn waves-effect waves-dark btn"><i class="material-icons right">web</i>See the App!</a>
+                        </div>
+                        <div class="col s6 see-more">
+                            <a href="${webProject.link_github}" target="_blank" class="proj-btn waves-effect waves-dark btn"><i class="material-icons right">code</i>See the Code!</a>
+                        </div>
                     </div>
                 `);
             });
