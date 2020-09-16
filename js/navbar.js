@@ -20,8 +20,8 @@ $(document).ready(function() {
             drop_content : [
                 {
                     title: "Falcon Finder",
-                    link_deploy: "https://scastanedamunoz.github.io/Project-1/",
-                    link_github: "https://github.com/SCastanedaMunoz/Project-1",
+                    link_deploy: "https://scastanedamunoz.github.io/Falcon-Finder/",
+                    link_github: "https://github.com/SCastanedaMunoz/Falcon-Finder",
                     path_screenshot: "assets/images/web_projects/falcon_finder.png",
                     summary: "For this project, the initial idea was to create a restaurant finder app where we could easily filter out restaurants by area and user information. To achieve this end result, we utilized Google Maps and Zomato Rest API."
                 }, 
