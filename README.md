@@ -33,4 +33,6 @@ When selecting one of the elements from the Web Dev dropdown, users will be take
 
 ## Mobile Aproach
 
-This portfolio was built with Mobile devices in mind, as such, all of the features are completely mobile compatible. 
+This portfolio was built with Mobile devices in mind, as such, all of the features are completely mobile compatible. As seen in the following screenshot of the mobile dropdown.
+
+![About](./docs/mobile-dropdown.png)
