@@ -62,7 +62,8 @@ $(document).ready(function() {
         // },
         {
             type:"icon",
-            icon:"assets/icons/GitHub.png",
+            icon_light:"assets/icons/GitHub-Light.png",
+            icon_dark:"assets/icons/GitHub-Dark.png",
             link:"https://github.com/SCastanedaMunoz",
             text:"GitHub"
         },
@@ -111,7 +112,8 @@ $(document).ready(function() {
                     $(contentItem).append(link);
                     break;
                 case "icon":
-                    var link = $(`<a href="${value.link}" target="_blank"><img src="${value.icon}" alt="${value.text} Social" class="social-icon-${location}"></a>`);
+                    var icon = value.text == "GitHub" ? location == "side"? value.icon_dark : value.icon_light : value.icon;
+                    var link = $(`<a href="${value.link}" target="_blank"><img src="${icon}" alt="${value.text} Social" class="social-icon-${location}"></a>`);
                     $(contentItem).append(link);
                     break;
                 case "dropdown":
