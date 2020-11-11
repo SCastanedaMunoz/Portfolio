@@ -10,7 +10,7 @@ $(document).ready(function () {
     {
       type: "page",
       link:
-        "https://drive.google.com/file/d/1DIu1QnKc5ktXcB2X-qkiC7vsH7hq-8le/view",
+        "https://drive.google.com/file/d/1-x6nO7vAsd0makzaCQCj2sXypM5dkCvs/view?usp=sharing",
       text: "Resume",
       target: "_blank",
     },
